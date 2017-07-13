@@ -1,0 +1,52 @@
+{
+    "name": "travoltron/laratrail",
+    "type": "library",
+    "description": "A package to log Laravel apps to Papertrail",
+    "keywords": [
+        "travoltron",
+        "laratrail",
+        "laravel",
+        "papertrail",
+        "logs",
+        "remote"
+    ],
+    "homepage": "https://github.com/travoltron/laratrail",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ben Warburton",
+            "email": "ben@travoltron.com",
+            "homepage": "https://travoltron.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : "~5.6|~7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "~4.0||~5.0",
+        "squizlabs/php_codesniffer": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Travoltron\\Laratrail\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Travoltron\\Laratrail\\": "tests"
+        }
+    },
+    "scripts": {
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
